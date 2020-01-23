@@ -11,9 +11,14 @@ namespace Bands
         public string BandName { get; set; }
         public int YearFormed { get; set; }
         public string Members { get; set; }
-        public string[] Albums { get; set; }
+        public List<Album> Albums { get; set; }
 
 
+
+        public override string ToString()
+        {
+            return string.Format($"{BandName} - Formed {YearFormed} - Members {Members}");
+        }
 
 
 
@@ -33,7 +38,7 @@ namespace Bands
     {
         public RockBand()
         {
-            Albums = new Album[10];
+            Albums = new Album;
         }
 
         public override string ToString()
