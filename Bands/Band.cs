@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Bands
 {
-    class Band: IComparable
+    public abstract class Band : IComparable
     {
         public string BandName { get; set; }
-        public DateTime YearFormed { get; set; }
+        public int YearFormed { get; set; }
         public string Members { get; set; }
+        public string[] Albums { get; set; }
 
 
 
@@ -26,5 +27,19 @@ namespace Bands
             int returnValue = this.BandName.CompareTo(objectToCompareTo.BandName);
             return returnValue;
         }
+    }
+
+    public class RockBand : Band
+    {
+        public RockBand()
+        {
+            Albums = new Album[10];
+        }
+
+        public override string ToString()
+        {
+            return (this.BandName + " - Rock");
+        }
+
     }
 }
