@@ -26,16 +26,16 @@ namespace Bands
         public MainWindow()
         {
             InitializeComponent();
-            CreateBands();
         }
 
         private void MainWindow1_Loaded(object sender, RoutedEventArgs e) //create band objects list and sort it
         {
             CreateBands();
-            bands.Sort();                              //sorts the bands list using the icomparable compareTo    
+            bands.Sort();                              //sorts the bands list using the icomparable compareTo  
+            BandsLstBx.ItemsSource = bands;
         }
 
-        private List<Band> CreateBands()           //method to create and return the list of bands
+        public List<Band> CreateBands()           //method to create and return the list of bands
         {
             //band objects are created
             Band B1 = new PopBand()
@@ -50,11 +50,37 @@ namespace Bands
                 YearFormed = 2003,
                 Members = "Simon Posford, Benji Vaughan",
             };
-
+            Band B3 = new RockBand()
+            {
+                BandName = "Muse",
+                YearFormed = 1994,
+                Members = "Matt Bellamy, Chris Wolstenholme, Dominic Howard",
+            };
+            Band B4 = new IndieBand()
+            {
+                BandName = "Primal Scream",
+                YearFormed = 1982,
+                Members = "Bobby Gillespie, Andrew Innes, Martin Duffy, Darrin Mooney, Simone Butler",
+            }; 
+            Band B5 = new IndieBand()
+            {
+                BandName = "The Stone Roses",
+                YearFormed = 1983,
+                Members = "Ian Brown, John Squire, Mani, Reni",
+            };
+            Band B6 = new RockBand()
+            {
+                BandName = "DreadZone",
+                YearFormed = 1993,
+                Members = "Steve Roberts, Dan Donavan, Chris Oldfield, Ben Balafonic",
+            };
             //add the above bands to the bands list
             bands.Add(B1);
             bands.Add(B2);
-            
+            bands.Add(B3);
+            bands.Add(B4);
+            bands.Add(B5);
+            bands.Add(B6);
             //return the completed list
             return bands;
 
@@ -65,7 +91,7 @@ namespace Bands
             Band selected = BandsLstBx.SelectedItem as Band;
             if (selected != null)
                 BandInfoTxtBlck.Text = selected.ToString();
-                AlbumTxtBlck.Text = selected.Albums.ToString();
+              //  AlbumTxtBlck.Text = selected.Albums.ToString();
         }
     }
 }

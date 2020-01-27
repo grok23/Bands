@@ -16,11 +16,12 @@ namespace Bands
 
         //Albums list generation and retrieval
         private List<Album> albums = new List<Album>();
-        public List<Album> Albums
-        {
-            get { return albums; }
-            set { albums = value; }
-        }
+
+        //public List<Album> Albums
+        //{
+        //    get { return albums; }
+        //    set { albums = value; }
+        //}   //commented out due to accessibility issues
 
         public override string ToString()
         {
@@ -45,7 +46,7 @@ namespace Bands
     {
         public RockBand()
         {
-          //List <Album> Albums = new List <Album>();   //should move generation of List of albums to the band class, as it's currently just being repeated in each sub class
+          List <Album> Albums = new List <Album>();   //should move generation of List of albums to the band class, as it's currently just being repeated in each sub class
         }
 
         public override string ToString()
@@ -59,7 +60,7 @@ namespace Bands
     {
         public PopBand()
         {
-           // List<Album> Albums = new List<Album>();
+           List<Album> Albums = new List<Album>();
         }
 
         public override string ToString()
@@ -73,7 +74,7 @@ namespace Bands
     {
         public IndieBand()
         {
-            //List<Album> Albums = new List<Album>();
+            List<Album> Albums = new List<Album>();
         }
 
         public override string ToString()
