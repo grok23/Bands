@@ -8,12 +8,18 @@ namespace Bands
 {
     public abstract class Band : IComparable
     {
+        //properties for all bands
         public string BandName { get; set; }
         public int YearFormed { get; set; }
         public string Members { get; set; }
         
-
-
+        //Albums list generation and retrieval
+        private List<Album> albums = new List<Album>();
+        public List<Album> Albums
+        {
+            get { return albums; }
+            set { albums = value; }
+        }
 
         public override string ToString()
         {
@@ -38,7 +44,7 @@ namespace Bands
     {
         public RockBand()
         {
-          List <Album> Albums = new List <Album>();
+          //List <Album> Albums = new List <Album>();   //should move generation of List of albums to the band class, as it's currently just being repeated in each sub class
         }
 
         public override string ToString()
@@ -52,7 +58,7 @@ namespace Bands
     {
         public PopBand()
         {
-            List<Album> Albums = new List<Album>();
+           // List<Album> Albums = new List<Album>();
         }
 
         public override string ToString()
@@ -66,7 +72,7 @@ namespace Bands
     {
         public IndieBand()
         {
-            List<Album> Albums = new List<Album>();
+            //List<Album> Albums = new List<Album>();
         }
 
         public override string ToString()
