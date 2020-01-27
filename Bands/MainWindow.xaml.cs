@@ -59,5 +59,13 @@ namespace Bands
             return bands;
 
         }
+
+        private void BandsLstBx_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Band selected = BandsLstBx.SelectedItem as Band;
+            if (selected != null)
+                BandInfoTxtBlck.Text = selected.ToString();
+                AlbumTxtBlck.Text = selected.Albums.ToString();
+        }
     }
 }

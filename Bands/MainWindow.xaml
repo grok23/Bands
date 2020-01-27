@@ -17,8 +17,8 @@
         <ComboBox x:Name="GenreCmbBx" HorizontalAlignment="Left" Height="30" Margin="130,70,0,0" VerticalAlignment="Top" Width="175" Grid.ColumnSpan="2"/>
         <TextBlock x:Name="BandInfoTxtBlck" HorizontalAlignment="Left" Height="95" Margin="175,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Grid.Column="1"/>
         <Label x:Name="AlbumsLbl" Content="Albums" HorizontalAlignment="Left" Margin="185,210,0,0" VerticalAlignment="Top" Width="150" FontSize="18" FontWeight="Bold" Grid.Column="1"/>
-        <ListBox x:Name="BandsLstBx" HorizontalAlignment="Left" Height="265" Margin="55,130,0,0" VerticalAlignment="Top" Width="250" Grid.ColumnSpan="2"/>
-        <ListBox HorizontalAlignment="Left" Height="140" Margin="175,255,0,0" VerticalAlignment="Top" Width="210" Grid.Column="1"/>
+        <ListBox x:Name="BandsLstBx" HorizontalAlignment="Left" Height="265" Margin="55,130,0,0" VerticalAlignment="Top" Width="250" Grid.ColumnSpan="2" SelectionChanged="BandsLstBx_SelectionChanged"/>
+        <TextBlock x:Name="AlbumTxtBlck" HorizontalAlignment="Left" Height="140" Margin="175,255,0,0" VerticalAlignment="Top" Width="210" Grid.Column="1"/>
         <Button x:Name="SaveBtn" Content="Save" HorizontalAlignment="Left" Height="30" Margin="270,430,0,0" VerticalAlignment="Top" Width="115" Grid.Column="1"/>
 
     </Grid>
