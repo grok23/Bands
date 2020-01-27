@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace Bands
 {
+    
     public abstract class Band : IComparable
     {
         //properties for all bands
         public string BandName { get; set; }
         public int YearFormed { get; set; }
         public string Members { get; set; }
-        
+
         //Albums list generation and retrieval
         private List<Album> albums = new List<Album>();
         public List<Album> Albums
