@@ -11,7 +11,7 @@ namespace Bands
         public string BandName { get; set; }
         public int YearFormed { get; set; }
         public string Members { get; set; }
-        public List<Album> Albums { get; set; }
+        
 
 
 
@@ -38,7 +38,7 @@ namespace Bands
     {
         public RockBand()
         {
-            Albums = new Album;
+          List <Album> Albums = new List <Album>();
         }
 
         public override string ToString()
@@ -46,5 +46,32 @@ namespace Bands
             return (this.BandName + " - Rock");
         }
 
+    }
+
+    public class PopBand : Band
+    {
+        public PopBand()
+        {
+            List<Album> Albums = new List<Album>();
+        }
+
+        public override string ToString()
+        {
+            return (this.BandName + " - Pop");
+        }
+
+    }
+
+    public class IndieBand : Band
+    {
+        public IndieBand()
+        {
+            List<Album> Albums = new List<Album>();
+        }
+
+        public override string ToString()
+        {
+            return (this.BandName + " - Indie");
+        }
     }
 }

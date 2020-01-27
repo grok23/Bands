@@ -11,5 +11,10 @@ namespace Bands
         public string Name { get; set; }
         public DateTime Released { get; set; }
         public int Sales { get; set; }
+
+        public Album()
+        {
+
+        }
     }
 }
