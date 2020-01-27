@@ -37,16 +37,16 @@ namespace Bands
         private List<Band> CreateBands()           //method to create and return the list of bands
         {
             //band objects are created
-            Band B1 = new Band()
+            Band B1 = new PopBand()
             {
                 BandName = "Shpongle",
-                YearFormed = new DateTime(1996, 06, 01),
+                YearFormed = 1996,
                 Members = "Simon Posford, Raja Ram",
             };
-            Band B2 = new Band()
+            Band B2 = new PopBand()
             {
                 BandName = "Younger Brother",
-                YearFormed = new DateTime(2003, 06, 01),
+                YearFormed = 2003,
                 Members = "Simon Posford, Benji Vaughan",
             };
 
