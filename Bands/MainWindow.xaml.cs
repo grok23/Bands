@@ -22,18 +22,19 @@ namespace Bands
     {
         //create lists to hold all bands available
         List<Band> bands = new List<Band>();
+
         public MainWindow()
         {
             InitializeComponent();
             CreateBands();
         }
+
         private void MainWindow1_Loaded(object sender, RoutedEventArgs e) //create band objects list and sort it
         {
-
             CreateBands();
-            bands.Sort();                              //sorts the bands list using the icomparable compareTo
-            
+            bands.Sort();                              //sorts the bands list using the icomparable compareTo    
         }
+
         private List<Band> CreateBands()           //method to create and return the list of bands
         {
             //band objects are created
