@@ -12,9 +12,11 @@ namespace Bands
         public int Released { get; set; }
         public int Sales { get; set; }
 
-        public Album()
+        public Album(string name, int released, int sales)
         {
-
+            this.Name = name;
+            this.Released = released;
+            this.Sales = sales;
         }
     }
 }
