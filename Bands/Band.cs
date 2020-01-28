@@ -22,6 +22,11 @@ namespace Bands
         //    get { return albums; }
         //    set { albums = value; }
         //}   //commented out due to accessibility issues
+        public Band()
+        {
+            
+        }
+
 
         public override string ToString()
         {
